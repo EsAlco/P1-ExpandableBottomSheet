@@ -40,7 +40,6 @@
 			isa = PBXGroup;
 			children = (
 				EBE985BC27BBFFEC00055F6F /* P1-ExpandableBottomSheet */,
-				EBE985CB27BC004300055F6F /* Course.swift */,
 				EBE985BB27BBFFEC00055F6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +60,7 @@
 				EBE985C127BBFFEE00055F6F /* Assets.xcassets */,
 				EBE985C327BBFFEE00055F6F /* Preview Content */,
 				EBE985CD27BC63B100055F6F /* CourseDetailView.swift */,
+				EBE985CB27BC004300055F6F /* Course.swift */,
 			);
 			path = "P1-ExpandableBottomSheet";
 			sourceTree = "<group>";

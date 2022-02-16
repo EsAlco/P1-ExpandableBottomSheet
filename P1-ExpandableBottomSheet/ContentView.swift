@@ -8,15 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // Variables
+    @State private var showCourseDetail = false
+    
+    @State private var selectedCourse: Course?
+    
     var body: some View {
-        NavigationView{
-            List{
-                ForEach(courses){ course in
-                    BasicRow(course: course)
-                    
+        ZStack{
+            NavigationView{
+                List{
+                    ForEach(courses){ course in
+                        BasicRow(course: course)
+                            .onTapGesture {
+                                self.showCourseDetail = true
+                                self.selectedCourse = course
+                            }
+                        
+                    }
+                }
+                .navigationBarTitle("Cursos Online")
+            }
+            if showCourseDetail{
+                BlanketView(color: .cyan)
+                    .opacity(0.5)
+                    .onTapGesture {
+                        // Si se toca el velo se oculta la vista detalle
+                        self.showCourseDetail = false
+                    }
+                
+                self.selectedCourse.map {
+                    CourseDetailView(course: $0)
+                        .transition(.move(edge: .bottom))
                 }
             }
-            .navigationBarTitle("Cursos Online")
         }
     }
 }
@@ -45,5 +70,19 @@ struct BasicRow: View {
                 .font(.subheadline)
                 .foregroundColor(.gray)
         }
+    }
+}
+
+// Creamos una capa, un velo, para no interferir con la vista de la lista cuando estamos en la vista del detalle.
+struct BlanketView: View{
+    var color: Color
+    
+    var body: some View{
+        VStack{
+            Spacer()
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: .infinity)
+        .background(color)
+        .edgesIgnoringSafeArea(.all)
     }
 }
