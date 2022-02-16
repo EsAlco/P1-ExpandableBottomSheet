@@ -11,6 +11,8 @@
 		EBE985C027BBFFEC00055F6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE985BF27BBFFEC00055F6F /* ContentView.swift */; };
 		EBE985C227BBFFEE00055F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE985C127BBFFEE00055F6F /* Assets.xcassets */; };
 		EBE985C527BBFFEE00055F6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE985C427BBFFEE00055F6F /* Preview Assets.xcassets */; };
+		EBE985CC27BC004300055F6F /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE985CB27BC004300055F6F /* Course.swift */; };
+		EBE985CE27BC63B200055F6F /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE985CD27BC63B100055F6F /* CourseDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		EBE985BF27BBFFEC00055F6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBE985C127BBFFEE00055F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBE985C427BBFFEE00055F6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBE985CB27BC004300055F6F /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		EBE985CD27BC63B100055F6F /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE985BC27BBFFEC00055F6F /* P1-ExpandableBottomSheet */,
+				EBE985CB27BC004300055F6F /* Course.swift */,
 				EBE985BB27BBFFEC00055F6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +60,7 @@
 				EBE985BF27BBFFEC00055F6F /* ContentView.swift */,
 				EBE985C127BBFFEE00055F6F /* Assets.xcassets */,
 				EBE985C327BBFFEE00055F6F /* Preview Content */,
+				EBE985CD27BC63B100055F6F /* CourseDetailView.swift */,
 			);
 			path = "P1-ExpandableBottomSheet";
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE985CE27BC63B200055F6F /* CourseDetailView.swift in Sources */,
+				EBE985CC27BC004300055F6F /* Course.swift in Sources */,
 				EBE985C027BBFFEC00055F6F /* ContentView.swift in Sources */,
 				EBE985BE27BBFFEC00055F6F /* P1_ExpandableBottomSheetApp.swift in Sources */,
 			);
