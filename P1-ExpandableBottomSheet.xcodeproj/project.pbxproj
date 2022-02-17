@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB43628327BD4B3C0059689B /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB43628227BD4B3C0059689B /* DragState.swift */; };
 		EBE985BE27BBFFEC00055F6F /* P1_ExpandableBottomSheetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE985BD27BBFFEC00055F6F /* P1_ExpandableBottomSheetApp.swift */; };
 		EBE985C027BBFFEC00055F6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE985BF27BBFFEC00055F6F /* ContentView.swift */; };
 		EBE985C227BBFFEE00055F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE985C127BBFFEE00055F6F /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB43628227BD4B3C0059689B /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 		EBE985BA27BBFFEC00055F6F /* P1-ExpandableBottomSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P1-ExpandableBottomSheet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE985BD27BBFFEC00055F6F /* P1_ExpandableBottomSheetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1_ExpandableBottomSheetApp.swift; sourceTree = "<group>"; };
 		EBE985BF27BBFFEC00055F6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				EBE985C327BBFFEE00055F6F /* Preview Content */,
 				EBE985CD27BC63B100055F6F /* CourseDetailView.swift */,
 				EBE985CB27BC004300055F6F /* Course.swift */,
+				EB43628227BD4B3C0059689B /* DragState.swift */,
 			);
 			path = "P1-ExpandableBottomSheet";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE985CE27BC63B200055F6F /* CourseDetailView.swift in Sources */,
+				EB43628327BD4B3C0059689B /* DragState.swift in Sources */,
 				EBE985CC27BC004300055F6F /* Course.swift in Sources */,
 				EBE985C027BBFFEC00055F6F /* ContentView.swift in Sources */,
 				EBE985BE27BBFFEC00055F6F /* P1_ExpandableBottomSheetApp.swift in Sources */,

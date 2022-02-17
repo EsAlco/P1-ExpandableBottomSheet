@@ -12,7 +12,7 @@ struct ContentView: View {
     // Variables
     @State private var showCourseDetail = false
     
-    @State private var selectedCourse: Course?
+    @State var selectedCourse: Course?
     
     var body: some View {
         ZStack{
@@ -21,15 +21,22 @@ struct ContentView: View {
                     ForEach(courses){ course in
                         BasicRow(course: course)
                             .onTapGesture {
-                                self.showCourseDetail = true
-                                self.selectedCourse = course
+                                withAnimation{
+                                    self.showCourseDetail = true
+                                    self.selectedCourse = course
+                                }
+                                
                             }
                         
                     }
                 }
                 .navigationBarTitle("Cursos Online")
             }
+            .offset(y: self.showCourseDetail ? -100 : 0)
+            .animation(.easeIn(duration: 0.25), value: self.showCourseDetail)
+            
             if showCourseDetail{
+                
                 BlanketView(color: .cyan)
                     .opacity(0.5)
                     .onTapGesture {
@@ -37,8 +44,8 @@ struct ContentView: View {
                         self.showCourseDetail = false
                     }
                 
-                self.selectedCourse.map {
-                    CourseDetailView(course: $0)
+                self.selectedCourse.map{
+                    CourseDetailView(course: $0, isShown: $showCourseDetail)
                         .transition(.move(edge: .bottom))
                 }
             }
