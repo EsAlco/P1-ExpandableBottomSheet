@@ -21,13 +21,9 @@ struct ContentView: View {
                     ForEach(courses){ course in
                         BasicRow(course: course)
                             .onTapGesture {
-                                withAnimation{
                                     self.showCourseDetail = true
                                     self.selectedCourse = course
-                                }
-                                
                             }
-                        
                     }
                 }
                 .navigationBarTitle("Cursos Online")

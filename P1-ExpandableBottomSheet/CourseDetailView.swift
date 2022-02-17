@@ -19,6 +19,8 @@ struct CourseDetailView: View {
     
     @Binding var isShown: Bool
     
+    @State var isAnimation = false
+    
    // @State var show = true
     
     var body: some View {
@@ -39,6 +41,7 @@ struct CourseDetailView: View {
                     DescriptionView(icon: nil,
                                 content: course.description)
                 }
+                
                 // Deshabilitamos el scrollView si la vista está medio abierta o el usuario la está moviendo, está en dragging.
                 .disabled(self.cardState == .half || self.dragState.isDragging)
 
@@ -49,9 +52,12 @@ struct CourseDetailView: View {
             // Distancia de la tarjeta al borde superior teniendo en cuenta el tamaño total de la vista, el 25% del tamaño.
             .offset(y: geometry.size.height*0.25 + self.dragState.translation.height+self.offset)
             
-           // .animation(.interpolatingSpring(stiffness: 100, damping: 20, initialVelocity: 10), value: self.show)
+            // Animamos la card al aparecer
+            .animation(.interpolatingSpring(stiffness: 100, damping: 20, initialVelocity: 10), value: self.isAnimation)
+            .onAppear{ self.isAnimation.toggle()}
+            
+            // Gesto Drag
             .gesture(DragGesture()
-                     
             .updating(self.$dragState){ (value, state, transaction) in
                 state = DragState.dragging(translation: value.translation)
             }
